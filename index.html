@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+    content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1.0, maximum-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    p {
+      font-size: 1em;
+      font-family:   cursive;
+      margin: 0;
+      font-weight: lighter
+      
+    }
+    h{font-family:   cursive}
+
+    * {
+      box-sizing: border-box;
+
+    }
+
+    body {
+      min-width: 469px;
+    }
+
+    header {
+
+      margin: auto;
+      /* width: 50%; */
+
+    }
+
+    #principal {
+      /* width: 100%;  */
+      margin: auto;
+      max-width: 500px;
+      text-align: center;
+      display: flex;
+      min-height: 100vh;
+      /* padding: 20px 10px; */
+
+    }
+
+
+
+    .container {
+
+
+      border-radius: 20px;
+      /* margin: auto; */
+      color: #ffffff;
+    }
+
+    #resultados {
+      /* float: right; */
+      /* background-color: #5f3ffc; */
+      background: linear-gradient(#4416c0, rgb(38, 21, 187));
+      margin: auto;
+      padding: 10px 15px;
+      width: 250px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      /* justify-content: center; */
+    }
+
+    h {
+      margin: 0;
+
+      /* font-weight: bold; */
+
+    }
+
+   
+
+
+
+    .container h1 {
+      font-size: 1.2em;
+      color: #fdf9f975;
+      margin-bottom: -8.064px;
+    }
+
+    .container h2 {
+      font-size: 1.7em;
+      margin-bottom: 0px;
+      margin-top: 1.576px;
+
+    }
+
+    #summary h3 {
+      color: rgba(0, 0, 0, 0.705);
+      margin-top: -45px;
+      padding-bottom: 0px;
+      text-align: left;
+      
+    }
+
+    .container #p1 {
+      font-size: 4em;
+      font-weight: bold;
+    }
+
+    .container #p2 {
+      font-size: 0.8em;
+      color: #fdf9f975;
+      font-weight: 700;
+    }
+
+    .container #p3 {
+      padding: 8px 15px 20px 15px;
+      margin-top: 0%;
+      color: #fdf9f975;
+      font-weight: 530;
+      font-size: 0.8em;
+    }
+
+
+
+
+
+
+
+    #summary {
+
+      padding: 0px 17px;
+      padding-bottom: 10px;
+      padding-top: 20px;
+      margin-top: 55px;
+
+
+
+    }
+
+    .button {
+      border-radius: 20px;
+      font-weight: bold;
+      border: 1px solid rgb(0, 0, 0, 0.5);
+      box-shadow: 0px 0px 0px 0px rgb(0, 0, 0, 0);
+      padding: 12px 70px;
+      margin-bottom: -50px;
+      background-color: #303b59;
+      color: #FFFEFF;
+
+    }
+
+    button:hover {
+      background-color: #5a065a;
+    }
+
+    .summarybarra {
+      border-radius: 5px;
+      display: flex;
+      width: 90%;
+      height: 35px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .summarybarra .img {
+      display: flex;
+
+    }
+
+    /* .summarybarra .pbarra{
+      
+      padding: 8px 24%;
+            }   
+     .summarybarra  p{padding: 8px;} */
+
+    .div {
+
+      margin: auto;
+      max-width: 100%;
+
+      border-radius: 20px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+
+      /* min-height: 100vh; */
+      background-color: #fdfdfd;
+      box-shadow: 10px 10px 10px rgb(0, 0, 0, 0.5);
+
+
+      padding: 0px 0px 0px 0px;
+
+    }
+
+    .div1 {
+      border-radius: 100px;
+      background: linear-gradient(#5f3ffc, rgb(38, 21, 187));
+      border-bottom-style: solid;
+      padding-top: 12px;
+      /* padding-right: -13px;
+      padding-left: 0px; */
+      padding-bottom: 11px;
+
+
+      border-left-width: 0px;
+      border-left-style: solid;
+      margin-bottom: 22px;
+      border-top-style: solid;
+      margin-top: 40px;
+      border-top-width: 0px;
+      border-bottom-width: 0px;
+      width: 127px;
+    }
+
+    /* div.summarybarra:nth-child(4) > p:nth-child(3) {
+  padding-left: 27%;
+}
+.summarybarra:nth-child(6)  p:nth-child(3) {
+  padding-left: 33%;
+}
+div.summarybarra:nth-child(8) > p:nth-child(3) {
+  padding-left: 34%;
+} */
+    .summarybarra .img {
+      display: flex;
+
+    }
+
+    @media screen and (max-width: 400px) {
+      body {
+        margin: 0%;
+        width: 100%;
+        min-width: 264px;
+
+      }
+
+      .div {
+
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+        padding: 0px;
+        border-radius: 0%;
+        align-items: center;
+        
+
+
+      }
+
+      .div1 {
+        width: 127px;
+        align-items: center;
+
+
+      }
+
+      #resultados {
+        width: 100%;
+
+        margin: 0px 0px;
+        /* padding: 0px 0px; */
+        border-radius: 0% 0% 5% 5%;
+
+        flex-direction: column;
+        display: flex
+      }
+
+      #summary {
+        width: 100%;
+        margin-top: auto;
+        margin-bottom: auto;
+
+      }
+    
+
+    .summarybarra {
+      width: 100%;
+      height: 50px;
+      
+    }
+
+
+    #principal {
+      padding: 0;
+      margin: 0px;
+
+    }
+
+    .container h1 {
+      margin-bottom: 8.064px;
+    }
+
+    .container h2 {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    .button {
+      margin-bottom: 0px;
+      height: 60px;
+      width:95%;
+      border-radius: 30px;
+    }
+
+    #summary div h3 {
+      margin-top: 15px;
+    }
+
+
+
+  }
+
+
+  
+    
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+
+  </header>
+  <section id="principal">
+
+    <div class="div">
+      <div id="resultados" class="container">
+
+        <h1>Your Result</h1>
+        <div class="div1">
+          <p id="p1">76 </p>
+          <p id="p2">of 100</p>
+
+
+
+        </div>
+
+        <h2>Great</h2>
+        <p id="p3">You scored higher than 65% of the people who have taken these tests.</p>
+
+
+      </div>
+      <section id="summary" >
+        <div>
+          <h3>Summary</h3>
+          <div class="summarybarra" style=" background-color:#fff6f5;color: #e16468;">
+            <div class="img"><img src="assets/images/icon-reaction.svg">
+              <p style="color: #5a065a;">Rection</p>
+            </div>
+            <p class="pbarra" style="color: rgb(0, 0, 0)" ;>80/100</p>
+          </div>
+          <br>
+          <div class="summarybarra" style="background-color:#fffbf2;color: #e3ab43;">
+            <div class="img"><img src="assets/images/icon-memory.svg" ><p>Memory</p></div>
+             <p style="color: black;" class="pbarra">92/100</p>
+          </div>
+          <br>
+          <div class="summarybarra" style="background-color:#f2fbfa;color: #46a78f;">
+            <div class="img"><img src="assets/images/icon-verbal.svg">
+              <p>Verbal</p>
+            </div>
+            <p style="color: black;" class="pbarra">61/100</p>
+          </div>
+          <br>
+          <div class="summarybarra" style="background-color:#f3f3fde5;color: #1f2abc;">
+            <div class="img"><img src="assets/images/icon-visual.svg"><p>Visual</p></div>
+            
+            <p style="color: black;" class="pbarra">72/100</p>
+          </div>
+          <br>
+          <div><button class="button">Continue</button></div>
+        </div>
+
+      </section>
+    </div>
+  </section>
+
+  <!-- <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
